@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script language="javascript" type="text/javascript">
+$(document).ready(function(){
+	$("button").click(function(){
+		$.ajax({
+			url:"time.php",
+			success:function(result){
+				$("#div1").html(result);
+			};
+		});
+	});
+});
+function ajaxFunction(){
+	// Variabel utama pada AJAX
+	var ajaxRequest;
+	try{
+		// Opera 8.0+, Firefox, Safari
+		ajaxRequest = new XMLHttpRequest();
+	}
+	catch (e){
+		// Browser Internet Explorer
+		try{
+			ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+		}
+		catch (e){
+			try{
+			ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch (e){
+				// Ada masalah pada browser
+				alert("Browser anda rusak!");
+				return false;
+			}
+		}
+	}
+	ajaxRequest.onreadystatechange=function(){
+		if (ajaxRequest.readyState==4) {
+			document.myform.time.value=ajaxRequest.responseText;
+		}
+	}
+	ajaxRequest.open("GET","time.php",true)
+	ajaxRequest.send(null);
+}
+</script>
+<form name="myform">
+	Name:<input type="text" onkeyup="ajaxFunction()" name="username">
+	Time:<input type="text" name="time">
+	
+</form>
+</body>
+</html>

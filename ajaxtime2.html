@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script language="javascript" type="text/javascript">
+	<!-- 
+	var angka =1;
+function ajaxFunction(){
+	// Variabel utama pada AJAX
+
+	var ajaxRequest;
+	try{
+		// Opera 8.0+, Firefox, Safari
+		ajaxRequest = new XMLHttpRequest();
+	}
+	catch (e){
+		// Browser Internet Explorer
+		try{
+			ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+		}
+		catch (e){
+			try{
+			ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch (e){
+				// Ada masalah pada browser
+				alert("Browser anda rusak!");
+				return false;
+			}
+		}
+	}
+	ajaxRequest.onreadystatechange=function(){
+		if (ajaxRequest.readyState==4) {
+			document.getElementById('txtHint').innerHTML=ajaxRequest.responseText;
+		}
+	}
+	ajaxRequest.open("GET","coba1.php?a="+angka,true)
+	ajaxRequest.send(null);
+	angka = angka +1;
+	if (angka==4) {
+		angka=1;
+	}
+}
+</script>
+<form name="myform">
+	Name:<input type="text" id="txt" value="" name="username">
+	<input type="button" onclick="ajaxFunction();"><br>
+	<span id="txtHint"></span>
+</form>
+</body>
+</html>

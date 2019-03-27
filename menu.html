@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script>
+</script>
+<body>
+
+<nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">New Menu</a>
+</nav>
+
+	<div class="jumbotron jumbotron-fluid">
+  		<div class="container">
+   
+  
+	<form action="sql.php" method="post">
+	<table>
+		
+		<tr>
+			<td>Nama</td>
+			<td>:</td>
+			<td><input type="text" name="name"></td>
+			<br>
+		</tr>
+		<tr>
+		<td>
+			alamat
+		</td>
+		<td>:</td>
+		<td>
+			<input type="text" name="address">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			umur
+		</td>
+		<td>:</td>
+		<td>
+			<input type="text" name="age">
+		</td>
+		
+	</tr>
+	<tr>
+		<td>Jenis Kelamin </td>
+		<td>:</td>
+		<td>
+			<input type="radio" name="g" value="L">pria<br>
+			<input type="radio" name="g" value="W">wanita<br>
+		</td>
+	</tr>		
+	
+		
+	</table>
+	<button href="login.php" class="btn btn-success">view</button>
+	<button name="insert" class="btn btn-success">Insert</button>
+</form>	
+</div>
+</div>
+</body>
+</html>

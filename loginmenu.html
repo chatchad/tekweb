@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Login 
+	</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<nav class="navbar fixed-top navbar-light bg-light">
+  		<a class="navbar-brand" href="#">Login</a>
+	</nav>
+	<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    
+  
+	<form action="login.php" method="post">
+		<div class="input-group">
+      		<div class="input-group-prepend">
+        	<span class="input-group-text" id="basic-addon1">Username</span>
+      		</div>
+      		<input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="user">
+    	</div>
+    	<div class="input-group">
+    	<div class="input-group-prepend">
+        	<span class="input-group-text" id="basic-addon1">Password</span>
+      	</div>
+    	<input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" name="pass">
+    	<small id="passwordHelpInline" class="text-muted">
+      	Must be 8-20 characters long.
+    	</small>
+  		</div>
+  		<button class="btn btn-outline-primary" name="login">Login</button>
+  		<button class="btn btn-outline-primary" name="register">Register</button>
+	</form>
+	</form>
+	</div>
+</div>
+</body>
+</html>
